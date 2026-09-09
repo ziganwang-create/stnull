@@ -1,0 +1,15 @@
+backbone,arch,params_M,hest_official_pcc,strict_median_r_36sec,drg_obs_8sec,feats_file,preds_dir,drg_csv,note
+ResNet50 (ImageNet),ResNet50,25.6,0.3252,0.1199,0.0173,feats_resnet50.npy,preds,drg_prior_validation_resnet50.csv,baseline reference
+Phikon,ViT-B/16 iBOT,85.8,0.3660,0.1591,0.0295,feats_phikon_p50_cls.npy,preds_phikon_p50,drg_prior_validation_phikon_p50.csv,prior run
+Phikon dual-scale,ViT-B/16 iBOT cat,85.8,,0.1607,0.0272,feats_phikon_cat.npy,preds_phikon_cat,drg_prior_validation_phikon_cat.csv,prior run
+Midnight-12k,ViT-g/14,1136,0.3952,0.1380,0.0293,feats_midnight_p50_cls.npy,preds_midnight_p50,drg_prior_validation_midnight_p50.csv,prior run; handoff quoted 0.1480/0.0246 - on-disk check csv gives 0.1380/0.0293
+Phikon-v2,ViT-L/16 DINOv2,303.4,0.3747,0.1557,0.0285,feats_phikon-v2_p50_cls.npy,preds_phikonv2_p50,drg_prior_validation_phikonv2_p50.csv,NEW this session; closes disclosure gap
+Kaiko ViT-S/16,ViT-S/16 DINO,21.7,0.3493,0.1339,0.0215,feats_kaiko_vits16_p50_cls.npy,preds_kaiko_vits16_p50,drg_prior_validation_kaiko_vits16_p50.csv,NEW this session
+CTransPath,Swin-T+ConvStem SRCL,27.5,0.3468,0.1379,0.0217,feats_ctranspath_p50_avg.npy,preds_ctranspath_p50,drg_prior_validation_ctranspath_p50.csv,"NEW this session; custom timm-1.0 adapter, 183/183 param tensors strictly loaded"
+Lunit ViT-S/8,ViT-S/8 DINO,21.7,0.3678,0.1629,0.0277,feats_lunit_vits8_p50_cls.npy,preds_lunit_vits8_p50,drg_prior_validation_lunit_vits8_p50.csv,NEW this session
+Kaiko ViT-S/8,ViT-S/8 DINO,21.7,0.3512,0.1364,0.0175,feats_kaiko_vits8_p50_cls.npy,preds_kaiko_vits8_p50,drg_prior_validation_kaiko_vits8_p50.csv,NEW this session
+Kaiko ViT-B/16,ViT-B/16 DINO,85.8,0.3645,0.1583,0.0308,feats_kaiko_vitb16_p50_cls.npy,preds_kaiko_vitb16_p50,drg_prior_validation_kaiko_vitb16_p50.csv,NEW this session
+Kaiko ViT-B/8,ViT-B/8 DINO,85.8,0.3735,0.1616,0.0304,feats_kaiko_vitb8_p50_cls.npy,preds_kaiko_vitb8_p50,drg_prior_validation_kaiko_vitb8_p50.csv,NEW; auto-evaluated by detached watcher after session end
+GPFM,ViT-L/14 DINOv2 distilled,303.4,0.3793,0.1617,0.0289,feats_gpfm_p50_cls.npy,preds_gpfm_p50_cls,drg_prior_validation_gpfm_p50_cls.csv,state-dict remapped per official get_model: ckpt['teacher'] backbone.* -> timm vit_large_patch14_dinov2 img224 (chunked blocks.c.g -> flat blocks.g; mask_token dropped); ImageNet norm; strict load accounting in extraction log
+Kaiko ViT-L/14 reg4,ViT-L/14 reg4 DINOv2,303.4,0.3641,0.1506,0.0267,feats_kaiko_vitl14_p50_cls.npy,preds_kaiko_vitl14_p50_cls,drg_prior_validation_kaiko_vitl14_p50_cls.csv,"DEVIATION: config native 518px, run at 224px (CPU 518px ~18.6h infeasible; all other backbones are 224px; dynamic pos-embed bicubic resample). ImageNet norm per config"
+GenBio-PathFM,ViT-g/16 JEDI per-channel,1100,0.4197,0.1585,0.0333,feats_genbio_p50_cls.npy,preds_genbio_p50_cls,drg_prior_validation_genbio_p50_cls.csv,"free-token ceiling (all-rank #2 0.4197); 1.1B per-channel 1-chan ViT (RGB CLS concat -> 4608-dim); norm mean(.697,.575,.728)/std(.188,.240,.187) per model card; 224px"

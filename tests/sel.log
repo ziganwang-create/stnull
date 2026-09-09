@@ -1,0 +1,54 @@
+C:\Users\wangzigan\AppData\Roaming\Python\Python311\site-packages\pandas\core\arrays\masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+done A1
+done A2
+done A3
+done A4
+done A5
+done A6
+done B1
+done B2
+done B3
+done B4
+done B5
+done B6
+done C1
+done C2
+done C3
+done C4
+done C5
+done C6
+done D1
+done D2
+done D3
+done D4
+done D5
+done D6
+done E1
+done E2
+done E3
+done F1
+done F2
+done F3
+done G1
+done G2
+done G3
+done H1
+done H2
+done H3
+r_all                    0.1199
+top50                    0.3113
+top100                   0.2738
+all_floor_free           0.0150
+top50_floor_free         0.1209
+top50_floormed_free      0.1010
+top100_floor_free        0.1009
+top100_floormed_free     0.0818
+all_floor_block          0.0489
+top50_floor_block        0.1813
+top50_floormed_block     0.1275
+top100_floor_block       0.1552
+top100_floormed_block    0.1023
+
+block floor > r_all in 5 /36 sections
+free  floor > r_all in 1 /36 sections

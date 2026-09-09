@@ -1,0 +1,28 @@
+model,skcm,rank,gap_vs_null
+GenBio-PathFM,0.6715,1,0.2315
+UNI2-h,0.6606,2,0.2206
+H-Optimus-1,0.6589,3,0.2189
+H-Optimus-0,0.6454,4,0.2054
+Virchow2,0.6402,5,0.2002
+Midnight-12k,0.636,6,0.196
+UNI,0.6346,7,0.1946
+Virchow,0.6243,8,0.1843
+H0-mini,0.6012,9,0.1612
+OpenMidnight,0.5941,10,0.1541
+GPFM,0.5891,11,0.1491
+Hibou-L,0.5817,12,0.1417
+CONCH v1,0.5787,13,0.1387
+Lunit ViT-S/8,0.5738,14,0.1338
+Kaiko ViT-B/8,0.5725,15,0.1325
+GigaPath,0.5619,16,0.1219
+Phikon-v2,0.5554,17,0.1154
+Kaiko ViT-L/14,0.5533,18,0.1133
+CONCH v1.5,0.5517,19,0.1117
+Kaiko ViT-B/16,0.5502,20,0.1102
+Kaiko ViT-S/16,0.5449,21,0.1049
+Phikon,0.5355,22,0.0955
+MUSK,0.5233,23,0.0833
+Kaiko ViT-S/8,0.5174,24,0.0774
+CTransPath,0.5097,25,0.0697
+ResNet50,0.4821,26,0.0421
+"ZERO-PIXEL libnull (ours, [1,log lib] per-gene linear, train-side fit, official caliber)",0.44,27,0.0

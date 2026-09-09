@@ -1,0 +1,4 @@
+    from pandas.core import (
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+38 passed, 1 warning in 148.71s (0:02:28)

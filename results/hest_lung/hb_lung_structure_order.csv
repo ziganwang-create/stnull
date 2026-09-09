@@ -1,0 +1,5 @@
+panel,caliber,order_obs,order_pred,order_match
+hest_var50,cp10k_panel,TENX118>TENX141,TENX118>TENX141,1
+hest_var50,log1p_raw,TENX118>TENX141,TENX118>TENX141,1
+shared259,cp10k_panel,TENX118>TENX141,TENX118>TENX141,1
+shared259,log1p_raw,TENX118>TENX141,TENX118>TENX141,1

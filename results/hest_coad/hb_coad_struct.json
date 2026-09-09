@@ -1,0 +1,160 @@
+{
+ "cohort": "COAD (HEST-bench), 4 Xenium samples",
+ "meta_patient_column": {
+  "TENX149": "Patient 1",
+  "TENX148": "Patient 1",
+  "TENX147": "Patient 1",
+  "TENX111": "(empty)"
+ },
+ "subseries": {
+  "TENX149": "Xenium In Situ, Sample P1 CRC (Stage II-A)",
+  "TENX148": "Xenium In Situ, Sample P2 CRC",
+  "TENX147": "Xenium In Situ, Sample P5 CRC (Stage IV-A)",
+  "TENX111": "Human Colon Preview Data, Xenium colon panel, stage 2A adenocarcinoma (separate 10x dataset, 8/2023)"
+ },
+ "true_patient_bestsupported": {
+  "TENX149": "CRCstudy_P1",
+  "TENX148": "CRCstudy_P2",
+  "TENX147": "CRCstudy_P5",
+  "TENX111": "Preview_donor_unknown"
+ },
+ "patient_mapping_argument": "HESTData.py:1249 groups splits by (dataset_title, patient). COAD has 2 groups: preview dataset {TENX111} (patient empty) and CRC-study trio {TENX147,148,149} (patient='Patient 1'). K=2 folds with test sizes 3 and 1 match exactly. NOTE: the metadata 'Patient 1' label for the trio is a mislabel - subseries names them Sample P1/P2/P5 CRC, three distinct patients in the source study (biorxiv 2024.06.04.597233); stage comments II-A (149) vs IV-A (147) corroborate distinct donors. The mislabel is CONSERVATIVE for splitting: the trio is never split across train/test, so no same-patient train/test overlap is demonstrable under either mapping. Residual risk: TENX111 preview donor is unidentified; its 'stage 2A adenocarcinoma' matches TENX149's Stage II-A, so same-donor identity with the trio can be neither confirmed nor excluded from public metadata.",
+ "splits": {
+  "0": {
+   "test": [
+    "TENX149",
+    "TENX148",
+    "TENX147"
+   ],
+   "train": [
+    "TENX111"
+   ]
+  },
+  "1": {
+   "test": [
+    "TENX111"
+   ],
+   "train": [
+    "TENX149",
+    "TENX148",
+    "TENX147"
+   ]
+  }
+ },
+ "leakage_check": [
+  {
+   "fold": 0,
+   "mapping": "meta",
+   "test_patients": [
+    "Patient 1"
+   ],
+   "train_patients": [
+    "(empty)"
+   ],
+   "overlap": []
+  },
+  {
+   "fold": 0,
+   "mapping": "subseries",
+   "test_patients": [
+    "CRCstudy_P1",
+    "CRCstudy_P2",
+    "CRCstudy_P5"
+   ],
+   "train_patients": [
+    "Preview_donor_unknown"
+   ],
+   "overlap": []
+  },
+  {
+   "fold": 1,
+   "mapping": "meta",
+   "test_patients": [
+    "(empty)"
+   ],
+   "train_patients": [
+    "Patient 1"
+   ],
+   "overlap": []
+  },
+  {
+   "fold": 1,
+   "mapping": "subseries",
+   "test_patients": [
+    "Preview_donor_unknown"
+   ],
+   "train_patients": [
+    "CRCstudy_P1",
+    "CRCstudy_P2",
+    "CRCstudy_P5"
+   ],
+   "overlap": []
+  }
+ ],
+ "leakage_verdict": "NO demonstrable leakage under both mappings (overlap empty in all folds); official split is (dataset_title,patient)-group-level; no patient-level corrected rerun needed. TENX111 donor identity unresolvable (flagged).",
+ "TENX111": {
+  "n_spots": 6138,
+  "n_genes": 541,
+  "in_tissue_n": 6138,
+  "in_tissue_frac": 1.0,
+  "is_integer": true,
+  "xmax": 3673.0,
+  "obs_total_counts_matches_rowsum": true,
+  "n_patch_barcodes": 5079,
+  "patch_barcodes_subset_of_obs": true,
+  "official_frac_of_obs": 0.8274682306940372,
+  "dup_genes": 0,
+  "miss_var50": []
+ },
+ "TENX147": {
+  "n_spots": 3997,
+  "n_genes": 541,
+  "in_tissue_n": 3997,
+  "in_tissue_frac": 1.0,
+  "is_integer": true,
+  "xmax": 3346.0,
+  "obs_total_counts_matches_rowsum": true,
+  "n_patch_barcodes": 3417,
+  "patch_barcodes_subset_of_obs": true,
+  "official_frac_of_obs": 0.8548911683762822,
+  "dup_genes": 0,
+  "miss_var50": []
+ },
+ "TENX148": {
+  "n_spots": 4379,
+  "n_genes": 541,
+  "in_tissue_n": 4379,
+  "in_tissue_frac": 1.0,
+  "is_integer": true,
+  "xmax": 2694.0,
+  "obs_total_counts_matches_rowsum": true,
+  "n_patch_barcodes": 3535,
+  "patch_barcodes_subset_of_obs": true,
+  "official_frac_of_obs": 0.8072619319479333,
+  "dup_genes": 0,
+  "miss_var50": []
+ },
+ "TENX149": {
+  "n_spots": 4009,
+  "n_genes": 541,
+  "in_tissue_n": 4009,
+  "in_tissue_frac": 1.0,
+  "is_integer": true,
+  "xmax": 3457.0,
+  "obs_total_counts_matches_rowsum": true,
+  "n_patch_barcodes": 3620,
+  "patch_barcodes_subset_of_obs": true,
+  "official_frac_of_obs": 0.9029683212771265,
+  "dup_genes": 0,
+  "miss_var50": []
+ },
+ "trio_var_same_geneset": true,
+ "n_genes_common_all4": 412,
+ "lib_definition_note": "Xenium: obs/total_counts equals the 541-gene panel row sum (verified per sample above); there is no whole-transcriptome library here, so lib = panel total. Deviation from the 'full transcriptome' lib convention is inherent to the technology and recorded, not fixable.",
+ "all_spots_equals_in_tissue": true,
+ "spotsets_used": [
+  "all",
+  "official"
+ ],
+ "panel_candidate_space": "trainHVG panels restricted to the 412 genes common to all 4 samples (both folds span both Xenium panels)"
+}

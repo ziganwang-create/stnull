@@ -1,0 +1,236 @@
+{
+ "TENX116": {
+  "in_tissue_values": [
+   1
+  ],
+  "is_integer": true,
+  "xmax": 4681.0,
+  "obs_total_counts_matches": true,
+  "barcodes_head": [
+   "000x000",
+   "000x001",
+   "000x002"
+  ],
+  "n_unique_barcodes": 3090,
+  "mito_genes": 0,
+  "miss_var50": [],
+  "miss_mean50": [],
+  "dup_genes": 0,
+  "array_row": [
+   0,
+   102
+  ],
+  "array_col": [
+   0,
+   29
+  ],
+  "spatial_col0_is_pxlcol": true,
+  "uns_keys": [
+   "spatial",
+   "spatial/ST",
+   "spatial/ST/images",
+   "spatial/ST/images/downscaled_fullres",
+   "spatial/ST/scalefactors",
+   "spatial/ST/scalefactors/spot_diameter_fullres",
+   "spatial/ST/scalefactors/tissue_downscaled_fullres_scalef"
+  ]
+ },
+ "TENX126": {
+  "in_tissue_values": [
+   1
+  ],
+  "is_integer": true,
+  "xmax": 4009.0,
+  "obs_total_counts_matches": true,
+  "barcodes_head": [
+   "000x000",
+   "000x001",
+   "000x002"
+  ],
+  "n_unique_barcodes": 2190,
+  "mito_genes": 0,
+  "miss_var50": [],
+  "miss_mean50": [],
+  "dup_genes": 0,
+  "array_row": [
+   0,
+   72
+  ],
+  "array_col": [
+   0,
+   29
+  ],
+  "spatial_col0_is_pxlcol": true,
+  "uns_keys": [
+   "spatial",
+   "spatial/ST",
+   "spatial/ST/images",
+   "spatial/ST/images/downscaled_fullres",
+   "spatial/ST/scalefactors",
+   "spatial/ST/scalefactors/spot_diameter_fullres",
+   "spatial/ST/scalefactors/tissue_downscaled_fullres_scalef"
+  ]
+ },
+ "TENX140": {
+  "in_tissue_values": [
+   1
+  ],
+  "is_integer": true,
+  "xmax": 3696.0,
+  "obs_total_counts_matches": true,
+  "barcodes_head": [
+   "000x006",
+   "000x007",
+   "000x008"
+  ],
+  "n_unique_barcodes": 4513,
+  "mito_genes": 0,
+  "miss_var50": [],
+  "miss_mean50": [
+   "AMY2A",
+   "GATM",
+   "CFTR",
+   "CFB",
+   "FSTL3",
+   "PPY",
+   "MDM2",
+   "SFRP2",
+   "FBN1",
+   "TCIM",
+   "NTN4",
+   "GCG",
+   "DST",
+   "AQP8",
+   "COL5A2",
+   "PECAM1",
+   "CAVIN1",
+   "MS4A6A",
+   "GPRC5A",
+   "CTSK",
+   "SFRP4",
+   "THBS2",
+   "MYLK",
+   "FBLN1",
+   "PDGFRB",
+   "C1orf162",
+   "PMP22",
+   "BASP1",
+   "CD93",
+   "THY1",
+   "ASPN",
+   "LTBP2",
+   "ACTG2",
+   "MEST",
+   "EHF",
+   "INS",
+   "PROX1",
+   "GPX2",
+   "TFPI",
+   "MALL",
+   "FHL2"
+  ],
+  "dup_genes": 0,
+  "array_row": [
+   0,
+   114
+  ],
+  "array_col": [
+   0,
+   57
+  ],
+  "spatial_col0_is_pxlcol": true,
+  "uns_keys": [
+   "spatial",
+   "spatial/ST",
+   "spatial/ST/images",
+   "spatial/ST/images/downscaled_fullres",
+   "spatial/ST/scalefactors",
+   "spatial/ST/scalefactors/spot_diameter_fullres",
+   "spatial/ST/scalefactors/tissue_downscaled_fullres_scalef"
+  ]
+ },
+ "_gene_universe": {
+  "n_intersection": 159,
+  "n_union": 919,
+  "per_sample": {
+   "TENX116": 538,
+   "TENX126": 541,
+   "TENX140": 541
+  },
+  "var50_in_intersection": 50,
+  "mean50_in_intersection": 9,
+  "only_in": {
+   "TENX116": [
+    "ABCC11",
+    "ACKR1",
+    "ACTG2",
+    "ACTN1",
+    "ADAMTS1",
+    "ADGRE1",
+    "ADGRL4",
+    "ADH1C",
+    "ADH4",
+    "ADIPOQ",
+    "AGER",
+    "AGR3",
+    "AHSP",
+    "AKR1C3",
+    "ALAS2",
+    "ALDH1A3",
+    "ALOX5AP",
+    "AMY2A",
+    "ANGPT2",
+    "ANXA3"
+   ],
+   "TENX126": [
+    "ABCC11",
+    "ACKR1",
+    "ACTG2",
+    "ADAMTS1",
+    "ADGRE1",
+    "ADGRL4",
+    "ADH1C",
+    "ADH4",
+    "ADIPOQ",
+    "AGER",
+    "AGR3",
+    "AHSP",
+    "ALAS2",
+    "ALDH1A3",
+    "AMY2A",
+    "ANGPT2",
+    "APCDD1",
+    "APOA5",
+    "APOBEC3A",
+    "APOLD1"
+   ],
+   "TENX140": [
+    "A2M",
+    "ACTB",
+    "AIRE",
+    "AKT1",
+    "ANXA1",
+    "APOE",
+    "AREG",
+    "ARG1",
+    "ARID1A",
+    "ARPC3",
+    "ARPC5",
+    "ATM",
+    "BATF3",
+    "BCL2",
+    "BRAF",
+    "C1QB",
+    "C1QBP",
+    "C1R",
+    "C1S",
+    "CCL11"
+   ]
+  },
+  "n_only_in": {
+   "TENX116": 379,
+   "TENX126": 382,
+   "TENX140": 382
+  }
+ }
+}

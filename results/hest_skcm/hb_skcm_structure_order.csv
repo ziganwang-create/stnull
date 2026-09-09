@@ -1,0 +1,9 @@
+spotset,panel,caliber,order_obs,order_pred,order_match
+all,hest_var50,cp10k_panel,TENX115>TENX117,TENX115>TENX117,1
+all,hest_var50,log1p_raw,TENX115>TENX117,TENX115>TENX117,1
+all,trainHVG737,cp10k_panel,TENX115>TENX117,TENX115>TENX117,1
+all,trainHVG737,log1p_raw,TENX115>TENX117,TENX115>TENX117,1
+official,hest_var50,cp10k_panel,TENX117>TENX115,TENX117>TENX115,1
+official,hest_var50,log1p_raw,TENX117>TENX115,TENX117>TENX115,1
+official,trainHVG737,cp10k_panel,TENX117>TENX115,TENX117>TENX115,1
+official,trainHVG737,log1p_raw,TENX117>TENX115,TENX117>TENX115,1

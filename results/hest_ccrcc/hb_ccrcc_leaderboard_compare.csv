@@ -1,0 +1,28 @@
+model,ccrcc_r,source,rank
+"ZERO-PIXEL library-size null (H1, official caliber)",0.49449546148892076,this audit,1
+Virchow2,0.2719,leaderboard,2
+H-Optimus-0,0.2676,leaderboard,3
+H0-mini,0.267,leaderboard,4
+Phikon-v2,0.2659,leaderboard,5
+Hibou-L,0.2657,leaderboard,6
+UNI2-h,0.264,leaderboard,7
+GenBio-PathFM,0.2615,leaderboard,8
+GPFM,0.2591,leaderboard,9
+Virchow,0.2586,leaderboard,10
+H-Optimus-1,0.2533,leaderboard,11
+Lunit ViT-S/8,0.2463,leaderboard,12
+OpenMidnight,0.2458,leaderboard,13
+GigaPath,0.243,leaderboard,14
+Phikon,0.2423,leaderboard,15
+UNI,0.24,leaderboard,16
+CTransPath,0.2362,leaderboard,17
+Kaiko ViT-S/8,0.2346,leaderboard,18
+Kaiko ViT-B/8,0.2313,leaderboard,19
+Kaiko ViT-B/16,0.2291,leaderboard,20
+ResNet50,0.2252,leaderboard,21
+Kaiko ViT-L/14,0.2194,leaderboard,22
+CONCH v1,0.218,leaderboard,23
+CONCH v1.5,0.2176,leaderboard,24
+Midnight-12k,0.2132,leaderboard,25
+Kaiko ViT-S/16,0.2099,leaderboard,26
+MUSK,0.1825,leaderboard,27

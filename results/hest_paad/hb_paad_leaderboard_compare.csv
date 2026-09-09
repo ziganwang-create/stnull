@@ -1,0 +1,28 @@
+model,paad_r,source,beats_null
+"ZERO-PIXEL library-size null (H1, ours)",0.525,"hb_paad_audit_libnull.csv: hest_var50/log1p_raw, official 3 folds, per-gene Pearson mean then fold mean; per-fold 0.6672/0.4533/0.4547",0
+Virchow,0.5159,gen4_hest README leaderboard (Ridge+PCA256 on patch features),0
+UNI2-h,0.5001,gen4_hest README leaderboard (Ridge+PCA256 on patch features),0
+H-Optimus-1,0.4964,gen4_hest README leaderboard (Ridge+PCA256 on patch features),0
+GenBio-PathFM,0.4959,gen4_hest README leaderboard (Ridge+PCA256 on patch features),0
+H0-mini,0.4919,gen4_hest README leaderboard (Ridge+PCA256 on patch features),0
+H-Optimus-0,0.4911,gen4_hest README leaderboard (Ridge+PCA256 on patch features),0
+Midnight-12k,0.49,gen4_hest README leaderboard (Ridge+PCA256 on patch features),0
+UNI,0.4807,gen4_hest README leaderboard (Ridge+PCA256 on patch features),0
+Virchow2,0.4779,gen4_hest README leaderboard (Ridge+PCA256 on patch features),0
+GigaPath,0.4746,gen4_hest README leaderboard (Ridge+PCA256 on patch features),0
+OpenMidnight,0.4731,gen4_hest README leaderboard (Ridge+PCA256 on patch features),0
+Hibou-L,0.4674,gen4_hest README leaderboard (Ridge+PCA256 on patch features),0
+Kaiko ViT-B/8,0.4601,gen4_hest README leaderboard (Ridge+PCA256 on patch features),0
+GPFM,0.4601,gen4_hest README leaderboard (Ridge+PCA256 on patch features),0
+CONCH v1.5,0.457,gen4_hest README leaderboard (Ridge+PCA256 on patch features),0
+Kaiko ViT-B/16,0.4524,gen4_hest README leaderboard (Ridge+PCA256 on patch features),0
+CONCH v1,0.4468,gen4_hest README leaderboard (Ridge+PCA256 on patch features),0
+Phikon-v2,0.4455,gen4_hest README leaderboard (Ridge+PCA256 on patch features),0
+Phikon,0.4425,gen4_hest README leaderboard (Ridge+PCA256 on patch features),0
+Kaiko ViT-S/16,0.4409,gen4_hest README leaderboard (Ridge+PCA256 on patch features),0
+Kaiko ViT-L/14,0.4372,gen4_hest README leaderboard (Ridge+PCA256 on patch features),0
+CTransPath,0.4314,gen4_hest README leaderboard (Ridge+PCA256 on patch features),0
+MUSK,0.4277,gen4_hest README leaderboard (Ridge+PCA256 on patch features),0
+Lunit ViT-S/8,0.4267,gen4_hest README leaderboard (Ridge+PCA256 on patch features),0
+Kaiko ViT-S/8,0.4181,gen4_hest README leaderboard (Ridge+PCA256 on patch features),0
+ResNet50,0.388,gen4_hest README leaderboard (Ridge+PCA256 on patch features),0

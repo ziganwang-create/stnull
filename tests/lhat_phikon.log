@@ -1,0 +1,12 @@
+C:\Users\wangzigan\AppData\Roaming\Python\Python311\site-packages\pandas\core\arrays\masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+[lhat A] alpha=1e+07 inner=0.5261 test_depth_r=0.2979 (6s)
+[lhat B] alpha=1e+06 inner=0.4378 test_depth_r=0.8179 (5s)
+[lhat C] alpha=1e+06 inner=0.4617 test_depth_r=0.7624 (6s)
+[lhat D] alpha=1e+05 inner=0.4809 test_depth_r=0.5553 (5s)
+[lhat E] alpha=1e+05 inner=0.5788 test_depth_r=-0.0264 (6s)
+[lhat F] alpha=1e+07 inner=0.5636 test_depth_r=0.0157 (5s)
+[lhat G] alpha=1e+06 inner=0.4562 test_depth_r=0.7684 (5s)
+[lhat H] alpha=1e+07 inner=0.4688 test_depth_r=0.6834 (6s)
+alphas {'A': 10000000.0, 'B': 1000000.0, 'C': 1000000.0, 'D': 100000.0, 'E': 100000.0, 'F': 10000000.0, 'G': 1000000.0, 'H': 10000000.0}
+depth_r {'A': 0.2979, 'B': 0.8179, 'C': 0.7624, 'D': 0.5553, 'E': -0.0264, 'F': 0.0157, 'G': 0.7684, 'H': 0.6834}

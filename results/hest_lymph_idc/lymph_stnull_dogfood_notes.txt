@@ -1,0 +1,25 @@
+RUN log1p_raw/all ok in 11s; r_tech=0.537 (split_half_full; ci_kind=section; perm med=0.0294 max=0.0754 nperm=50); warnings=1; degr=4
+  WARN [log1p_raw/all] lib_size has non-positive entries; clamped to 1
+  DEGR [log1p_raw/all] no labels/composition -> section 3 and the CRG/DRG rungs are off; the strongest-null column is therefore a LOWER bound
+  DEGR [log1p_raw/all] no is_train -> nulls are cross-fitted within section (null_fit=cv_within_section), which can be slightly optimistic relative to a train-only fit; only test-selected top-N readouts are shown
+  DEGR [log1p_raw/all] block permutation requested but fell back to FREE in 4/4 section(s) (NCBI681, NCBI682, NCBI683, NCBI684): the torus embedding covered <50% of spots or the lattice was degenerate; floors in those sections are anticonservative
+  DEGR [log1p_raw/all] coord_kind='micron' -> coords snapped to a pitch-estimated pseudo-grid for block permutation and the 3x3 smoothing lever (kNN is used for neighbour nulls); if the snap is poor the permutation falls back to FREE, which is now recorded in the entry above and per section in perm_kind_used
+RUN log1p_raw/in_tissue ok in 8s; r_tech=0.466 (split_half_full; ci_kind=section; perm med=0.0188 max=0.0741 nperm=50); warnings=0; degr=4
+  DEGR [log1p_raw/in_tissue] no labels/composition -> section 3 and the CRG/DRG rungs are off; the strongest-null column is therefore a LOWER bound
+  DEGR [log1p_raw/in_tissue] no is_train -> nulls are cross-fitted within section (null_fit=cv_within_section), which can be slightly optimistic relative to a train-only fit; only test-selected top-N readouts are shown
+  DEGR [log1p_raw/in_tissue] block permutation requested but fell back to FREE in 4/4 section(s) (NCBI681, NCBI682, NCBI683, NCBI684): the torus embedding covered <50% of spots or the lattice was degenerate; floors in those sections are anticonservative
+  DEGR [log1p_raw/in_tissue] coord_kind='micron' -> coords snapped to a pitch-estimated pseudo-grid for block permutation and the 3x3 smoothing lever (kNN is used for neighbour nulls); if the snap is poor the permutation falls back to FREE, which is now recorded in the entry above and per section in perm_kind_used
+RUN cp10k_panel/all ok in 11s; r_tech=0.492 (split_half_full; ci_kind=section; perm med=0.0226 max=0.0829 nperm=50); warnings=1; degr=4
+  WARN [cp10k_panel/all] lib_size has non-positive entries; clamped to 1
+  DEGR [cp10k_panel/all] no labels/composition -> section 3 and the CRG/DRG rungs are off; the strongest-null column is therefore a LOWER bound
+  DEGR [cp10k_panel/all] no is_train -> nulls are cross-fitted within section (null_fit=cv_within_section), which can be slightly optimistic relative to a train-only fit; only test-selected top-N readouts are shown
+  DEGR [cp10k_panel/all] block permutation requested but fell back to FREE in 4/4 section(s) (NCBI681, NCBI682, NCBI683, NCBI684): the torus embedding covered <50% of spots or the lattice was degenerate; floors in those sections are anticonservative
+  DEGR [cp10k_panel/all] coord_kind='micron' -> coords snapped to a pitch-estimated pseudo-grid for block permutation and the 3x3 smoothing lever (kNN is used for neighbour nulls); if the snap is poor the permutation falls back to FREE, which is now recorded in the entry above and per section in perm_kind_used
+RUN cp10k_panel/in_tissue ok in 8s; r_tech=0.416 (split_half_full; ci_kind=section; perm med=0.0189 max=0.0851 nperm=50); warnings=0; degr=4
+  DEGR [cp10k_panel/in_tissue] no labels/composition -> section 3 and the CRG/DRG rungs are off; the strongest-null column is therefore a LOWER bound
+  DEGR [cp10k_panel/in_tissue] no is_train -> nulls are cross-fitted within section (null_fit=cv_within_section), which can be slightly optimistic relative to a train-only fit; only test-selected top-N readouts are shown
+  DEGR [cp10k_panel/in_tissue] block permutation requested but fell back to FREE in 4/4 section(s) (NCBI681, NCBI682, NCBI683, NCBI684): the torus embedding covered <50% of spots or the lattice was degenerate; floors in those sections are anticonservative
+  DEGR [cp10k_panel/in_tissue] coord_kind='micron' -> coords snapped to a pitch-estimated pseudo-grid for block permutation and the 3x3 smoothing lever (kNN is used for neighbour nulls); if the snap is poor the permutation falls back to FREE, which is now recorded in the entry above and per section in perm_kind_used
+PROBE A (pixel coords as 'grid'): coord_kind='grid' but the coordinates do not look like an integer lattice (median nearest-neighbour spacing 365, rook-neighbour hit rate 0%) -> switched to coord_kind='micron': kNN neighbourhoods, pitch-estimated block permutation. Pass coord_kind='micron' yourself to silence this warning.
+PROBE B (Visium hex array coords as 'grid'): coord_kind='grid' but the coordinates do not look like an integer lattice (median nearest-neighbour spacing 1.41, rook-neighbour hit rate 0%) -> switched to coord_kind='micron': kNN neighbourhoods, pitch-estimated block permutation. Pass coord_kind='micron' yourself to silence this warning.
+PROBE B r_nbr median across sections: 0.1585

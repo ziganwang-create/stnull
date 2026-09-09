@@ -1,0 +1,27 @@
+rank,model,leaderboard_avg,verdict,priority,gated,source,arch,feat_dim,input_px,download_mb,est_extract_h,notes
+1,H-Optimus-1,0.4229,EXCLUDED,-,manual,bioptimus/H-optimus-1,ViT-g/14,1536,224,-,-,gated; no HF token
+2,GenBio-PathFM,0.4197,QUEUED,LOW,no,genbio-ai/genbio-pathfm,ViT-g scale,?,224,4535,~10,ungated but 4.5GB download (8-31h at 40-160KB/s; ~2-8h segmented) + ~10h CPU extract; report to supervisor before running
+3,H-Optimus-0,0.4150,EXCLUDED,-,manual,bioptimus/H-optimus-0,ViT-g/14,1536,224,-,-,gated; no HF token
+4,UNI2-h,0.4141,EXCLUDED,-,manual,MahmoodLab/UNI2-h,ViT-h/14,1536,224,-,-,gated; no HF token
+5,Virchow,0.4061,EXCLUDED,-,manual,paige-ai/Virchow,ViT-h/14,2560,224,-,-,gated; no HF token
+6,Virchow2,0.4034,EXCLUDED,-,manual,paige-ai/Virchow2,ViT-h/14,2560,224,-,-,gated; no HF token
+7,Midnight-12k,0.3952,DONE,-,no,kaiko-ai/midnight,ViT-g/14,3072 (cls_mean),224,0 (cached),0,already run: feats_midnight_p50_cls.npy; observed 0.1480 / DRG 0.0246
+8,H0-mini,0.3958,EXCLUDED,-,manual,bioptimus/H0-mini,ViT-B/14 distilled,768,224,-,-,gated (manual); no HF token
+9,OpenMidnight,0.3912,EXCLUDED,-,auto,SophontAI/OpenMidnight,ViT-g/14,1536,224,-,-,auto-gated still requires login token; also 4GB+ ViT-g ~10h CPU
+10,Hibou-L,0.3881,EXCLUDED,-,auto,histai/hibou-L,ViT-L/14,1024,224,-,-,auto-gated still requires login token
+11,GigaPath,0.3875,EXCLUDED,-,manual,prov-gigapath/prov-gigapath,ViT-g/14,1536,224,-,-,gated; no HF token
+12,UNI,0.3873,EXCLUDED,-,manual,MahmoodLab/UNI,ViT-L/16,1024,224,-,-,gated; no HF token
+13,CONCH v1.5,0.3792,EXCLUDED,-,manual,MahmoodLab/conchv1_5,ViT-L/16,768,448,-,-,gated; no HF token
+14,GPFM,0.3793,QUEUED,LOW,no,majiabo/GPFM,ViT-L/14 (DINOv2 distilled),1024,224,1213,~2.8,ungated single GPFM.pth; needs custom state-dict remap (their get_model code); download 2-8h plain / ~1-2h segmented; borderline - report before running
+15,Phikon-v2,0.3747,QUEUED,P1 zero-cost,no,LOCAL feats_phikon-v2_p50_cls.npy,ViT-L/16 (DINOv2),1024,224,0,0,feats already on disk (53MB = 13580x1024 f32); just run preds+drg; closes the 'extracted never evaluated' disclosure gap
+16,Kaiko ViT-B/8,0.3735,QUEUED,MEDIUM,no,1aurent/vit_base_patch8_224.kaiko_ai_towards_large_pathology_fms,ViT-B/8,768,224,343,~1.8-3,best-ranked token-free timm mirror; smoke OK (arch fwd 0.47s/tile bs8); download ~36min-2.4h plain / ~10-36min segmented
+17,CONCH v1,0.3696,EXCLUDED,-,manual,MahmoodLab/conch,ViT-B/16,512,448,-,-,gated; no HF token
+18,Lunit ViT-S/8,0.3678,QUEUED,P4,no,1aurent/vit_small_patch8_224.lunit_dino,ViT-S/8,384,224,86.7,~0.6-1,smoke OK; ImageNet mean/std per config; download 9-37min plain / ~2-9min segmented
+19,Phikon,0.3660,DONE,-,no,owkin/phikon,ViT-B/16,768,224,0 (cached),0,already run: 0.1490 / DRG 0.0295; dual-scale cat 0.1607 / 0.0272
+20,Kaiko ViT-B/16,0.3645,QUEUED,P6,no,1aurent/vit_base_patch16_224.kaiko_ai_towards_large_pathology_fms,ViT-B/16,768,224,343,~0.4-1,smoke OK; mean=std=0.5 per config; download ~36min-2.4h plain / ~10-36min segmented
+21,Kaiko ViT-L/14,0.3641,QUEUED,LOW,no,1aurent/vit_large_patch14_reg4_dinov2.kaiko_ai_towards_large_pathology_fms,ViT-L/14 reg4,1024,518,1218,~18.6 at native 518px,smoke OK but config demands 518px input -> 4.9s/tile = ~18.6h CPU; running at 224 would cut to ~2-3h but deviates from model config (annotate if done); download 2-8h plain
+22,Kaiko ViT-S/8,0.3512,QUEUED,P5,no,1aurent/vit_small_patch8_224.kaiko_ai_towards_large_pathology_fms,ViT-S/8,384,224,86.7,~0.65-1,smoke OK; ImageNet mean/std per config; download 9-37min plain / ~2-9min segmented
+23,Kaiko ViT-S/16,0.3493,QUEUED,P3,no,1aurent/vit_small_patch16_224.kaiko_ai_towards_large_pathology_fms,ViT-S/16,384,224,86.7,~0.12-0.35,cheapest new extraction; smoke OK; mean=std=0.5 per config
+24,CTransPath,0.3468,QUEUED,P2 local-weights,no,LOCAL Xiao_data_codes\data\hest_bench\fm_v1\ctranspath\ctranspath.pth,Swin-T + ConvStem,768,224,0 (local 111MB pth),~0.3-0.5,weights already on disk; needs ~100-line adapter (timm swin_tiny_patch4_window7_224 with embed_layer=ConvStem per trident/TransPath); mean/std ImageNet; verify key prefix 'model.'
+25,MUSK,0.3467,EXCLUDED,-,manual,xiangjx/musk,multimodal BEiT-L,1024,384,-,-,gated (manual); no HF token; also needs custom musk package
+26,ResNet50,0.3252,DONE,-,no,timm/resnet50.tv_in1k,ResNet50 IN1k,2048,224,0 (cached),0,already run baseline: 0.1199 / DRG 0.0173

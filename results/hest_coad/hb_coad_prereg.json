@@ -1,0 +1,80 @@
+{
+ "cohort": "COAD (HEST-bench), 4 Xenium samples",
+ "utc_timestamp": "2026-08-24T03:25:53Z",
+ "local_time": "2026-08-24 13:25:53",
+ "basis": "HER2ST fit r = 0.0296 + 0.2874*sd(loglib); LYMPH falsified linear extrapolation at sd>1 (saturation ~0.4 expected there). Order prediction (by sd loglib) is the PRIMARY prediction. NOTE lib here = Xenium 541-gene panel total (no full transcriptome).",
+ "predictions": {
+  "all": {
+   "order_by_sd_desc": [
+    "TENX148",
+    "TENX147",
+    "TENX111",
+    "TENX149"
+   ],
+   "falsification_order": "libnull med-r ranking (cp10k_panel caliber) must match this order; any inversion between samples whose sd gap >0.10 falsifies H3",
+   "point_predictions": {
+    "TENX111": {
+     "sd_loglib": 1.622838009961258,
+     "point_pred_med_r": 0.4959761068136317,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4; Xenium panel-lib may shift the line (SKCM Xenium showed libnull well above HER2ST-fit line)",
+     "extrapolated": true
+    },
+    "TENX147": {
+     "sd_loglib": 1.6907133978605664,
+     "point_pred_med_r": 0.5154804631012627,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4; Xenium panel-lib may shift the line (SKCM Xenium showed libnull well above HER2ST-fit line)",
+     "extrapolated": true
+    },
+    "TENX148": {
+     "sd_loglib": 1.69657080933296,
+     "point_pred_med_r": 0.5171636216631011,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4; Xenium panel-lib may shift the line (SKCM Xenium showed libnull well above HER2ST-fit line)",
+     "extrapolated": true
+    },
+    "TENX149": {
+     "sd_loglib": 1.576271502647448,
+     "point_pred_med_r": 0.48259497150334074,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4; Xenium panel-lib may shift the line (SKCM Xenium showed libnull well above HER2ST-fit line)",
+     "extrapolated": true
+    }
+   }
+  },
+  "official": {
+   "order_by_sd_desc": [
+    "TENX147",
+    "TENX149",
+    "TENX148",
+    "TENX111"
+   ],
+   "falsification_order": "libnull med-r ranking (cp10k_panel caliber) must match this order; any inversion between samples whose sd gap >0.10 falsifies H3",
+   "point_predictions": {
+    "TENX111": {
+     "sd_loglib": 0.6095143746415773,
+     "point_pred_med_r": 0.20479213233274274,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4; Xenium panel-lib may shift the line (SKCM Xenium showed libnull well above HER2ST-fit line)",
+     "extrapolated": false
+    },
+    "TENX147": {
+     "sd_loglib": 0.9640541265675922,
+     "point_pred_med_r": 0.306671029142168,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4; Xenium panel-lib may shift the line (SKCM Xenium showed libnull well above HER2ST-fit line)",
+     "extrapolated": false
+    },
+    "TENX148": {
+     "sd_loglib": 0.7631337347447728,
+     "point_pred_med_r": 0.24893547832106322,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4; Xenium panel-lib may shift the line (SKCM Xenium showed libnull well above HER2ST-fit line)",
+     "extrapolated": false
+    },
+    "TENX149": {
+     "sd_loglib": 0.8364239846537388,
+     "point_pred_med_r": 0.2699958242118978,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4; Xenium panel-lib may shift the line (SKCM Xenium showed libnull well above HER2ST-fit line)",
+     "extrapolated": false
+    }
+   }
+  }
+ },
+ "h2_prediction": "zerobio sim >= real med-r in >=7/8 of (sample x spotset) cells under cp10k_panel (hest_var50 panel), as in HER2ST/LYMPH/READ; falsified if sim < real in >=3/8",
+ "official_metric_prediction": "official caliber (log1p raw, var50, official patch-barcode spot set, fold-concat, per-gene pearson mean over genes then over 2 folds): libnull mean-r predicted in 0.15-0.35 (COAD leaderboard: max 0.3284 GenBio-PathFM, ResNet50 0.2500, min 0.2057 Kaiko ViT-S/16, 26 rows README.md:108-133). Prior Xenium cohort SKCM: null 0.44 below all models; prior LYMPH/PAAD null beat all. Point guess 0.25: null beats >= half of the 26 rows. Falsified if null mean-r < 0.10."
+}

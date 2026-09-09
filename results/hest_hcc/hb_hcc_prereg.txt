@@ -1,0 +1,38 @@
+HCC (HEST-bench) zero-pixel audit -- PRE-REGISTERED predictions
+Registered BEFORE any null-model (H1/H2/H4/H5) computation on this cohort.
+Inputs used: hb_hcc_depth_pretable.csv (depth/structure only; no expression-vs-
+prediction correlation computed yet).
+
+COHORT STRUCTURE (established first):
+- 2 samples: NCBI642 (1987 spots), NCBI643 (2261 spots), Visium fresh frozen,
+  36601 genes, X = raw integer counts.
+- Patient mapping (HEST_v1_1_0.csv lines 658-659): NCBI643 = "Patient a"
+  (CHC20 tumor), NCBI642 = "Patient b" (CHC23 tumor). One sample per patient.
+- Official splits (splits/train_0..test_1.csv): fold0 train=642/test=643,
+  fold1 train=643/test=642 = leave-one-patient-out. NO LEAKAGE in splits.
+- in_tissue == True for 100% of spots in both samples -> the two spot sets
+  (all_spots / in_tissue) are IDENTICAL in this cohort; results will coincide.
+- Deep libraries: median UMI 26017 (642) / 34526 (643).
+
+P1 (ordering, MAIN prediction): H1 libnull performance NCBI643 > NCBI642
+   under cp10k calibers, because sd(log lib): 0.683 (643) > 0.627 (642).
+   Confidence: weak-moderate (delta sd only 0.056; falsification band: if the
+   ordering reverses by more than 0.03 in med_r, P1 is falsified).
+P2 (point, HER2ST linear fit r = 0.0296 + 0.2874*sd(loglib), interpolation,
+   both sd values inside HER2ST fit range [0.389, 1.428]):
+   NCBI642 pred med_r ~ 0.210, NCBI643 pred med_r ~ 0.226 (cp10k caliber).
+   Falsification band +/-0.10 (LYMPH showed the linear fit transfers only
+   roughly across cohorts; saturation ~0.4 expected at sd>1, not relevant here).
+P3: log1p:raw caliber should EXCEED cp10k calibers on the same spot set by
+   roughly +0.10 to +0.25 (depth enters the target directly), as in
+   HER2ST/LYMPH.
+P4: H2 zerobio: sim >= real med_r in >= 3 of 4 (sample x caliber) cells --
+   i.e. the depth-driven null is expected to be maximal under zero biology.
+P5: trainHVG737 panel should score >= hest_var50 panel under cp10k (more
+   genes with non-degenerate variance), as seen in LYMPH.
+P6: official-caliber comparison: expect zero-model official-metric mean-r to
+   be a NON-TRIVIAL fraction of the leaderboard's per-task column. NOTE: the
+   CURRENT gen4_hest README (results 03.04.26, 25 models, line 106) has NO HCC
+   column (9 tasks only); HCC was a task of the original HEST-Benchmark
+   (NeurIPS 2024 paper). Comparison will therefore be against the paper table
+   (secondary source) and reported as such.

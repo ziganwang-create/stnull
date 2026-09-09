@@ -1,0 +1,12 @@
+model,hcc_pearson,source,notes
+STFlow,0.124,"STFlow_2025.pdf Table 1 p.6 (HCC row)","std .004; STFlow release script known to use test as val (AUDIT_REPORT)"
+BLEEP,0.086,"STFlow_2025.pdf Table 1 p.6","best baseline in that table"
+STNet,0.072,"STFlow_2025.pdf Table 1 p.6",
+TRIPLEX,0.062,"STFlow_2025.pdf Table 1 p.6",
+UNI,0.052,"STFlow_2025.pdf Table 1 p.6","Random Forest head per HEST-1k setup"
+Gigapath,0.051,"STFlow_2025.pdf Table 1 p.6",
+Ciga,0.040,"STFlow_2025.pdf Table 1 p.6",
+HisToGene,0.028,"STFlow_2025.pdf Table 1 p.6",
+Gigapath-slide,0.025,"STFlow_2025.pdf Table 1 p.6",
+ZERO-PIXEL_libnull,0.1484,"hb_hcc_audit_libnull.csv (hest_var50/all/log1p_raw; per-fold mean_r 0.1767+0.1202 over 2)","[1,log lib] per-gene linear, train-side fit, official splits; NO image pixels"
+NOTE,,"gen4_hest README.md (results 03.04.26, lines 106-133) has NO HCC column - 9 tasks only; HCC is in the 10-task HF bench data used by STFlow/STPath (gen4_stflow benchmark.py:279)","HEST NeurIPS 2024 paper (local PDF) also reports 9 tasks without HCC"

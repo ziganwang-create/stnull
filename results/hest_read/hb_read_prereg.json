@@ -1,0 +1,45 @@
+{
+ "cohort": "READ (HEST-bench)",
+ "utc_timestamp": "2026-08-23T16:21:35Z",
+ "local_time": "2026-08-24 02:21:35",
+ "basis": "HER2ST fit r = 0.0296 + 0.2874*sd(loglib); LYMPH falsified linear extrapolation at sd>1 (saturation ~0.4 expected there). Order prediction (by sd loglib) is the PRIMARY prediction.",
+ "predictions": {
+  "all": {
+   "order_by_sd_desc": [
+    "ZEN40",
+    "ZEN48",
+    "ZEN36",
+    "ZEN49"
+   ],
+   "falsification_order": "libnull med-r ranking (cp10k_panel caliber) must match this order; any inversion between samples whose sd gap >0.10 falsifies H3",
+   "point_predictions": {
+    "ZEN36": {
+     "sd_loglib": 0.5638936758041382,
+     "point_pred_med_r": 0.19168278015436357,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4",
+     "extrapolated": false
+    },
+    "ZEN40": {
+     "sd_loglib": 0.8775202631950378,
+     "point_pred_med_r": 0.2818050599831072,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4",
+     "extrapolated": false
+    },
+    "ZEN48": {
+     "sd_loglib": 0.647538423538208,
+     "point_pred_med_r": 0.21571854645914734,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4",
+     "extrapolated": false
+    },
+    "ZEN49": {
+     "sd_loglib": 0.549535870552063,
+     "point_pred_med_r": 0.1875569879075431,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4",
+     "extrapolated": false
+    }
+   }
+  }
+ },
+ "h2_prediction": "zerobio sim >= real med-r in >=7/8 of (sample x spotset) cells under cp10k_panel, as in HER2ST and LYMPH; falsified if sim < real in >=3/8",
+ "official_metric_prediction": "official caliber (log1p raw, var50, patch barcodes, fold-concat, per-gene pearson mean over genes then folds): libnull mean-r predicted in 0.15-0.35 (READ leaderboard max 0.2421, H-Optimus-1; based on LYMPH where null 0.3263 beat all 26 models we predict null beats >=half of the 26 README rows; falsified if null mean-r < 0.0783 = ResNet50 floor)"
+}

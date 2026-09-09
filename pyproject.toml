@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stnull"
+version = "0.3.0"
+description = "Audit spatial-expression predictions against zero-pixel null models"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Zigan Wang", email = "zigan.wang@uq.edu.au" }]
+dependencies = ["numpy>=1.22", "pandas>=1.4", "scipy>=1.8"]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.5"]
+test = ["pytest>=7"]
+
+[project.scripts]
+stnull = "stnull.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,669 @@
+{
+  "stnull_version": "0.3.0",
+  "run": {
+    "stnull_version": "0.3.0",
+    "seed": 0,
+    "created_utc": "2026-09-08T09:30:49Z",
+    "space_note": "",
+    "n_spots": 812,
+    "n_genes": 100,
+    "n_sections": 3,
+    "n_patients": 3,
+    "inputs_present": {
+      "y_pred": true,
+      "lib_size": true,
+      "coords": true,
+      "labels": true,
+      "composition": false,
+      "counts": true,
+      "patient": true,
+      "is_train": false,
+      "lib_pred": false
+    },
+    "inputs_sha1": {
+      "y_true": "6f609cdcb6b9",
+      "y_pred": "4855b2791f48",
+      "section": "176fb00306fb",
+      "lib_size": "abac82ccaf4b",
+      "coords": "3ceccfbc1f2d",
+      "labels": "17d90a44c90c",
+      "composition": "a4892048c5bf",
+      "patient": "ab6440b99d1b"
+    },
+    "null_fit": "cv_within_section",
+    "depth_proxy": "observed",
+    "perm_kind": "perm_block",
+    "n_perm": 100,
+    "n_boot": 100,
+    "degradations": [
+      "no is_train -> nulls are cross-fitted within section (null_fit=cv_within_section), which can be slightly optimistic relative to a train-only fit; only test-selected top-N readouts are shown"
+    ],
+    "agg_gene": "median+mean",
+    "agg_section": "median+mean",
+    "space": "log1p_cp10k:panel"
+  },
+  "headline": {
+    "r_median": {
+      "value": 0.1050942211494913,
+      "floor": 0.03145046203803356,
+      "floor_kind": "perm_block",
+      "ci_lo": 0.03113059616140832,
+      "ci_hi": 0.108632387934605,
+      "n_spots": 812,
+      "n_genes": 100,
+      "status": "ok",
+      "note": "ci_kind=section; perm med=-0.0006 max=0.0509 nperm=100",
+      "excess": 0.07364375911145774
+    },
+    "r_mean": {
+      "value": 0.11146436401251185,
+      "floor": 0.024793840382486533,
+      "floor_kind": "perm_block",
+      "ci_lo": 0.05320879538744497,
+      "ci_hi": 0.11394013824394385,
+      "n_spots": 812,
+      "n_genes": 100,
+      "status": "ok",
+      "note": "mean over genes; ci_kind=section; perm med=0.0011 max=0.0383 nperm=100",
+      "excess": 0.08667052363002531
+    },
+    "strongest_null": {
+      "name": "depth_comp_null",
+      "value": 0.31689777253883206,
+      "floor": 0.07078920781949487,
+      "floor_kind": "perm_block",
+      "ci_lo": 0.22082274534354734,
+      "ci_hi": 0.4315779475049796,
+      "n_spots": 812,
+      "n_genes": 100,
+      "status": "ok",
+      "note": "ci_kind=section; perm med=-0.0127 max=0.1309 nperm=100",
+      "excess": 0.24610856471933718
+    },
+    "frac_sections_model_beats_null": {
+      "value": 0.0,
+      "floor": 0.0,
+      "floor_kind": "perm_block",
+      "ci_lo": null,
+      "ci_hi": null,
+      "n_spots": 3,
+      "n_genes": 100,
+      "status": "ok",
+      "note": "fraction of sections; n= number of sections; perm med=0.0000 max=0.0000 nperm=100",
+      "excess": 0.0
+    },
+    "aggregation_note": "per-gene Pearson r -> within-section median AND mean -> across-section median AND mean; the literature mixes the two, so both are printed"
+  },
+  "depth": {
+    "depth_null": {
+      "value": 0.3028816746100501,
+      "floor": 0.06777008107905484,
+      "floor_kind": "perm_block",
+      "ci_lo": 0.17438964355801773,
+      "ci_hi": 0.41352514782746286,
+      "n_spots": 812,
+      "n_genes": 100,
+      "status": "ok",
+      "note": "zero pixels: one scalar (log lib) per spot; ci_kind=section; perm med=-0.0051 max=0.1270 nperm=100",
+      "excess": 0.23511159353099526
+    },
+    "depth_1d": {
+      "value": null,
+      "floor": null,
+      "floor_kind": "none",
+      "ci_lo": null,
+      "ci_hi": null,
+      "n_spots": 812,
+      "n_genes": 0,
+      "status": "na",
+      "note": "depth_proxy='observed': l_hat IS the measured log library size, so this readout is fixed by construction and says nothing about the model. Pass lib_pred= or depth_proxy='from_pred' to measure the depth the model itself carries.",
+      "excess": null
+    },
+    "dg": {
+      "value": 0.028786233482072175,
+      "floor": 0.02019751745721568,
+      "floor_kind": "perm_block",
+      "ci_lo": -0.029404694210509855,
+      "ci_hi": 0.030402156433849546,
+      "n_spots": 812,
+      "n_genes": 100,
+      "status": "ok",
+      "note": "ci_kind=section; perm med=-0.0005 max=0.0374 nperm=100",
+      "excess": 0.008588716024856495
+    },
+    "share_depth": {
+      "value": 0.7350124209788977,
+      "floor": 1.5838798668506016,
+      "floor_kind": "perm_free",
+      "ci_lo": null,
+      "ci_hi": null,
+      "n_spots": 812,
+      "n_genes": 1,
+      "status": "derived",
+      "note": "1 - DG/r_full: the share of the headline that the depth control removes. Ratio of two floored numbers; read it with r_full and DG above, not alone; perm med=0.7206 max=2.3493 nperm=96",
+      "excess": -0.8488674458717038
+    },
+    "depth_r_of_pred": {
+      "value": null,
+      "floor": null,
+      "floor_kind": "none",
+      "ci_lo": null,
+      "ci_hi": null,
+      "n_spots": 812,
+      "n_genes": 0,
+      "status": "na",
+      "note": "depth_proxy='observed': l_hat IS the measured log library size, so this readout is fixed by construction and says nothing about the model. Pass lib_pred= or depth_proxy='from_pred' to measure the depth the model itself carries.",
+      "excess": null
+    },
+    "sd_loglib_by_section": [
+      {
+        "section": "A1",
+        "sd_log_lib": 0.525242979,
+        "n_spots": 345,
+        "r_model": 0.0311305962,
+        "depth_null": 0.1743896436
+      },
+      {
+        "section": "B1",
+        "sd_log_lib": 1.2562808514,
+        "n_spots": 293,
+        "r_model": 0.1050942211,
+        "depth_null": 0.4135251478
+      },
+      {
+        "section": "C1",
+        "sd_log_lib": 0.8201431727,
+        "n_spots": 174,
+        "r_model": 0.1086323879,
+        "depth_null": 0.3028816746
+      }
+    ],
+    "trend_sd_vs_r": null,
+    "lib_denominator_check": "lib_size must be the FULL-TRANSCRIPTOME total count. Using the panel row sum instead moves the composition null by 0.007-0.083 r on the reference dataset. Declared space: log1p_cp10k:panel.",
+    "target_carries_depth": false
+  },
+  "composition": {
+    "cross_null": {
+      "value": 0.12287575987564928,
+      "floor": 0.07272169253523124,
+      "floor_kind": "perm_block",
+      "ci_lo": 0.10183842589787073,
+      "ci_hi": 0.24506367770809212,
+      "n_spots": 812,
+      "n_genes": 100,
+      "status": "ok",
+      "note": "class means, cv_within_section; ci_kind=section; perm med=-0.0169 max=0.1286 nperm=100",
+      "excess": 0.05015406734041804
+    },
+    "oracle_null": {
+      "value": 0.23965359085160415,
+      "floor": 0.07991094322052494,
+      "floor_kind": "perm_block",
+      "ci_lo": 0.22884476507002854,
+      "ci_hi": 0.30266758180148323,
+      "n_spots": 812,
+      "n_genes": 100,
+      "status": "ok",
+      "note": "UPPER_BOUND: class means read off the scored section; not eligible to be the strongest null; ci_kind=section; perm med=-0.0211 max=0.1371 nperm=100",
+      "excess": 0.1597426476310792
+    },
+    "crg": {
+      "value": 0.04346173306736008,
+      "floor": 0.022269033229906594,
+      "floor_kind": "perm_block",
+      "ci_lo": -0.0010328535341254913,
+      "ci_hi": 0.08627916134644983,
+      "n_spots": 812,
+      "n_genes": 100,
+      "status": "ok",
+      "note": "ci_kind=section; perm med=0.0027 max=0.0389 nperm=100",
+      "excess": 0.021192699837453484
+    },
+    "n_classes": 7,
+    "class_counts": {
+      "": 39,
+      "adipose tissue": 84,
+      "breast glands": 41,
+      "cancer in situ": 21,
+      "connective tissue": 155,
+      "invasive cancer": 470,
+      "other": 2
+    },
+    "small_classes_dropped": [
+      "immune infiltrate"
+    ],
+    "kind": "labels (one-hot)"
+  },
+  "spatial": {
+    "r_nbr": {
+      "value": 0.20200861810993975,
+      "floor": 0.054701980556971626,
+      "floor_kind": "perm_block",
+      "ci_lo": 0.13587041646907438,
+      "ci_hi": 0.32013094135345377,
+      "n_spots": 812,
+      "n_genes": 100,
+      "status": "ok",
+      "note": "mean of the neighbours' TRUE y; the image is never used; ci_kind=section; perm med=-0.0274 max=0.1133 nperm=100",
+      "excess": 0.14730663755296813
+    },
+    "frac_sections_nbr_beats_model": {
+      "value": 1.0,
+      "floor": null,
+      "floor_kind": "none",
+      "ci_lo": null,
+      "ci_hi": null,
+      "n_spots": 3,
+      "n_genes": 1,
+      "status": "ok",
+      "note": "fraction of sections where a zero-pixel smoother beats the model; n = sections",
+      "excess": null
+    },
+    "smooth_lever": {
+      "value": 0.020527325999588453,
+      "floor": 0.03208162767815236,
+      "floor_kind": "perm_block",
+      "ci_lo": 0.011544153379699947,
+      "ci_hi": 0.08961573494397171,
+      "n_spots": 812,
+      "n_genes": 100,
+      "status": "ok",
+      "note": "delta in the headline when the GROUND TRUTH is 3x3 smoothed; ci_kind=section; perm med=-0.0012 max=0.0553 nperm=100",
+      "excess": -0.01155430167856391
+    },
+    "moran_I_resid": {
+      "value": 0.1220582555368595,
+      "floor": 0.1519346061301553,
+      "floor_kind": "perm_block",
+      "ci_lo": 0.08186204157074567,
+      "ci_hi": 0.1784974158510209,
+      "n_spots": 812,
+      "n_genes": 100,
+      "status": "ok",
+      "note": "Moran's I of (y - y_hat); high = the model left a smooth spatial field on the table; ci_kind=section; perm med=0.0948 max=0.1621 nperm=100",
+      "excess": -0.029876350593295797
+    },
+    "perm_block_vs_free": {
+      "name": "0.1051  [perm_block floor 0.0315]  CI[0.0311,0.1086]  n=812/100  (same value, block floor; ci_kind=section; perm med=-0.0006 max=0.0509 nperm=100)",
+      "value": 0.1050942211494913,
+      "floor": 0.01714181164611045,
+      "floor_kind": "perm_free",
+      "ci_lo": 0.03113059616140832,
+      "ci_hi": 0.108632387934605,
+      "n_spots": 812,
+      "n_genes": 100,
+      "status": "ok",
+      "note": "same value, FREE floor (anticonservative); ci_kind=section; perm med=0.0003 max=0.0279 nperm=100",
+      "excess": 0.08795240950338085
+    }
+  },
+  "selection": {
+    "by_n": {
+      "10": {
+        "value": 0.3490735719089201,
+        "floor": 0.23745974972273895,
+        "floor_kind": "perm_selection",
+        "ci_lo": 0.22441139597848556,
+        "ci_hi": 0.42243451927596215,
+        "n_spots": 812,
+        "n_genes": 10,
+        "status": "ok",
+        "note": "genes ranked by r ON THE TEST SET; ci_kind=section; perm med=0.1603 max=0.2683 nperm=100",
+        "excess": 0.11161382218618113
+      },
+      "50": {
+        "value": 0.20209606734450555,
+        "floor": 0.11190359418495384,
+        "floor_kind": "perm_selection",
+        "ci_lo": 0.11603696121008081,
+        "ci_hi": 0.26234926274125164,
+        "n_spots": 812,
+        "n_genes": 50,
+        "status": "ok",
+        "note": "genes ranked by r ON THE TEST SET; ci_kind=section; perm med=0.0599 max=0.1250 nperm=100",
+        "excess": 0.09019247315955171
+      }
+    },
+    "train_selected": null,
+    "lever_price": [
+      {
+        "lever": "test-selected top-10 genes",
+        "value_base": 0.1050942211,
+        "value_lever": 0.3490735719,
+        "delta": 0.2439793508,
+        "floor_base": 0.031450462,
+        "floor_lever": 0.2374597497,
+        "floor_kind": "perm_selection",
+        "status": "ok",
+        "note": "the floor is what pure selection noise buys"
+      },
+      {
+        "lever": "test-selected top-50 genes",
+        "value_base": 0.1050942211,
+        "value_lever": 0.2020960673,
+        "delta": 0.0970018462,
+        "floor_base": 0.031450462,
+        "floor_lever": 0.1119035942,
+        "floor_kind": "perm_selection",
+        "status": "ok",
+        "note": "the floor is what pure selection noise buys"
+      },
+      {
+        "lever": "3x3 smoothing of the ground truth",
+        "value_base": 0.1050942211,
+        "value_lever": 0.1256215471,
+        "delta": 0.020527326,
+        "floor_base": 0.031450462,
+        "floor_lever": 0.0320816277,
+        "floor_kind": "perm_block",
+        "status": "ok",
+        "note": "ground truth is smoothed, the model is not retrained"
+      },
+      {
+        "lever": "section-level split leakage",
+        "value_base": null,
+        "value_lever": null,
+        "delta": null,
+        "floor_base": null,
+        "floor_lever": null,
+        "floor_kind": "none",
+        "status": "na",
+        "note": "patient= was given but no patient contributes 2+ sections here, so a section-level split would leak nothing measurable in THIS subset"
+      },
+      {
+        "lever": "target space / denominator change",
+        "value_base": null,
+        "value_lever": null,
+        "delta": null,
+        "floor_base": null,
+        "floor_lever": null,
+        "floor_kind": "none",
+        "status": "na",
+        "note": "out of scope by decision D2: stnull never transforms y. Re-run audit() with the other space to price it."
+      }
+    ],
+    "leakage_lever": null
+  },
+  "ceiling": {
+    "r_tech": {
+      "value": 0.6673605813541785,
+      "floor": 0.13936257070322405,
+      "floor_kind": "perm_free",
+      "ci_lo": 0.5326438998288912,
+      "ci_hi": 0.6762089767757202,
+      "n_spots": 812,
+      "n_genes": 100,
+      "status": "ok",
+      "note": "split_half_full; ci_kind=section; perm med=0.0023 max=0.1888 nperm=50",
+      "excess": 0.5279980106509545
+    },
+    "r_nbr": {
+      "value": 0.20200861810993975,
+      "floor": 0.054701980556971626,
+      "floor_kind": "perm_block",
+      "ci_lo": 0.13587041646907438,
+      "ci_hi": 0.32013094135345377,
+      "n_spots": 812,
+      "n_genes": 100,
+      "status": "ok",
+      "note": "mean of the neighbours' TRUE y; the image is never used; ci_kind=section; perm med=-0.0274 max=0.1133 nperm=100",
+      "excess": 0.14730663755296813
+    },
+    "r_over_ceiling": {
+      "value": 0.1574774178844048,
+      "floor": null,
+      "floor_kind": "derived",
+      "ci_lo": null,
+      "ci_hi": null,
+      "n_spots": 812,
+      "n_genes": 100,
+      "status": "derived",
+      "note": "model r as a fraction of THIS DATASET's measurement noise ceiling; floor of the ratio = 0.0471",
+      "excess": null
+    },
+    "method": "split_half_full"
+  },
+  "ladder": [
+    {
+      "section": "A1",
+      "patient": "A",
+      "n_spots": 345,
+      "r_full": 0.0311305962,
+      "r_full_floor": 0.0188600659,
+      "r_full_ci_lo": 0.0216082506,
+      "r_full_ci_hi": 0.0606959722,
+      "dg": 0.0304021564,
+      "dg_floor": 0.0192800798,
+      "dg_ci_lo": 0.0138350696,
+      "dg_ci_hi": 0.0457629539,
+      "crg": -0.0010328535,
+      "crg_floor": 0.0154874443,
+      "crg_ci_lo": -0.0134085409,
+      "crg_ci_hi": 0.0252093073,
+      "drg": 0.0036962749,
+      "drg_floor": 0.0162091632,
+      "drg_ci_lo": -0.0104544728,
+      "drg_ci_hi": 0.026496648,
+      "drg_observed": 0.0036962749,
+      "drg_observed_floor": 0.0162091632,
+      "drg_observed_ci_lo": null,
+      "drg_observed_ci_hi": null,
+      "drg_above_floor": false,
+      "n_genes": 100
+    },
+    {
+      "section": "B1",
+      "patient": "B",
+      "n_spots": 293,
+      "r_full": 0.1050942211,
+      "r_full_floor": 0.1321618406,
+      "r_full_ci_lo": 0.0683785045,
+      "r_full_ci_hi": 0.1501677804,
+      "dg": -0.0294046942,
+      "dg_floor": 0.052224496,
+      "dg_ci_lo": -0.0497796756,
+      "dg_ci_hi": -0.0032229855,
+      "crg": 0.0434617331,
+      "crg_floor": 0.0884551383,
+      "crg_ci_lo": 0.011893007,
+      "crg_ci_hi": 0.0756435069,
+      "drg": -0.0027506845,
+      "drg_floor": 0.0254794376,
+      "drg_ci_lo": -0.0223496822,
+      "drg_ci_hi": 0.0174902943,
+      "drg_observed": -0.0027506845,
+      "drg_observed_floor": 0.0254794376,
+      "drg_observed_ci_lo": null,
+      "drg_observed_ci_hi": null,
+      "drg_above_floor": false,
+      "n_genes": 100
+    },
+    {
+      "section": "C1",
+      "patient": "C",
+      "n_spots": 174,
+      "r_full": 0.1086323879,
+      "r_full_floor": 0.049096405,
+      "r_full_ci_lo": 0.062397216,
+      "r_full_ci_hi": 0.1459242773,
+      "dg": 0.0287862335,
+      "dg_floor": 0.0342220481,
+      "dg_ci_lo": -0.0088423484,
+      "dg_ci_hi": 0.05892759,
+      "crg": 0.0862791613,
+      "crg_floor": 0.0382382969,
+      "crg_ci_lo": 0.0667819472,
+      "crg_ci_hi": 0.1306660659,
+      "drg": 0.0513171145,
+      "drg_floor": 0.0370832415,
+      "drg_ci_lo": 0.0200233024,
+      "drg_ci_hi": 0.0743214669,
+      "drg_observed": 0.0513171145,
+      "drg_observed_floor": 0.0370832415,
+      "drg_observed_ci_lo": null,
+      "drg_observed_ci_hi": null,
+      "drg_above_floor": false,
+      "n_genes": 100
+    }
+  ],
+  "per_section": [
+    {
+      "section": "A1",
+      "patient": "A",
+      "n_spots": 345,
+      "n_eval": 345,
+      "r_model": 0.0311305962,
+      "depth_null": 0.1743896436,
+      "depth_1d": null,
+      "cross_null": 0.1228757599,
+      "oracle_null": 0.2288447651,
+      "depth_comp_null": 0.2208227453,
+      "r_nbr": 0.1358704165,
+      "dg": 0.0304021564,
+      "crg": -0.0010328535,
+      "drg": 0.0036962749,
+      "drg_observed": 0.0036962749,
+      "moran": 0.0818620416,
+      "smooth_delta": 0.0115441534,
+      "sd_loglib": 0.525242979,
+      "depth_r_of_pred": null
+    },
+    {
+      "section": "B1",
+      "patient": "B",
+      "n_spots": 293,
+      "n_eval": 293,
+      "r_model": 0.1050942211,
+      "depth_null": 0.4135251478,
+      "depth_1d": null,
+      "cross_null": 0.2450636777,
+      "oracle_null": 0.3026675818,
+      "depth_comp_null": 0.4315779475,
+      "r_nbr": 0.3201309414,
+      "dg": -0.0294046942,
+      "crg": 0.0434617331,
+      "drg": -0.0027506845,
+      "drg_observed": -0.0027506845,
+      "moran": 0.1784974159,
+      "smooth_delta": 0.0896157349,
+      "sd_loglib": 1.2562808514,
+      "depth_r_of_pred": null
+    },
+    {
+      "section": "C1",
+      "patient": "C",
+      "n_spots": 174,
+      "n_eval": 174,
+      "r_model": 0.1086323879,
+      "depth_null": 0.3028816746,
+      "depth_1d": null,
+      "cross_null": 0.1018384259,
+      "oracle_null": 0.2396535909,
+      "depth_comp_null": 0.3168977725,
+      "r_nbr": 0.2020086181,
+      "dg": 0.0287862335,
+      "crg": 0.0862791613,
+      "drg": 0.0513171145,
+      "drg_observed": 0.0513171145,
+      "moran": 0.1220582555,
+      "smooth_delta": 0.020527326,
+      "sd_loglib": 0.8201431727,
+      "depth_r_of_pred": null
+    }
+  ],
+  "na": {},
+  "warnings": [],
+  "claims": [
+    {
+      "text_en": "Across 3 sections the model's median per-gene r is 0.1051, BELOW the strongest zero-pixel null tried here (depth_comp_null = 0.3169). Model beats that null in 0/3 (0%) of sections.",
+      "text_zh": "3 张切片上,模型逐基因中位 r = 0.1051,低于本次跑出的最强零像素零模型(depth_comp_null = 0.3169);模型在 0/3 (0%) 的切片上赢过该零模型。",
+      "support": "supported",
+      "evidence": {
+        "headline": {
+          "value": 0.1050942211494913,
+          "floor": 0.03145046203803356,
+          "floor_kind": "perm_block",
+          "ci_lo": 0.03113059616140832,
+          "ci_hi": 0.108632387934605,
+          "n_spots": 812,
+          "n_genes": 100,
+          "status": "ok",
+          "note": "ci_kind=section; perm med=-0.0006 max=0.0509 nperm=100",
+          "excess": 0.07364375911145774,
+          "stat": "headline.r_median"
+        },
+        "null": {
+          "value": 0.31689777253883206,
+          "floor": 0.07078920781949487,
+          "floor_kind": "perm_block",
+          "ci_lo": 0.22082274534354734,
+          "ci_hi": 0.4315779475049796,
+          "n_spots": 812,
+          "n_genes": 100,
+          "status": "ok",
+          "note": "ci_kind=section; perm med=-0.0127 max=0.1309 nperm=100",
+          "excess": 0.24610856471933718,
+          "stat": "strongest_null"
+        }
+      }
+    },
+    {
+      "text_en": "After controlling for sequencing depth, the predictions of this model retain r = 0.0288 (perm_block floor 0.0202, 95% CI [-0.0294,0.0304]).",
+      "text_zh": "在控制测序深度之后,**该模型的预测**还剩下 r = 0.0288(置换底线 0.0202,95% CI [-0.0294,0.0304])。",
+      "support": "supported",
+      "evidence": {
+        "value": 0.028786233482072175,
+        "floor": 0.02019751745721568,
+        "floor_kind": "perm_block",
+        "ci_lo": -0.029404694210509855,
+        "ci_hi": 0.030402156433849546,
+        "n_spots": 812,
+        "n_genes": 100,
+        "status": "ok",
+        "note": "ci_kind=section; perm med=-0.0005 max=0.0374 nperm=100",
+        "excess": 0.008588716024856495,
+        "stat": "depth.dg"
+      }
+    },
+    {
+      "text_en": "After controlling for depth and composition, THE PREDICTIONS OF THIS MODEL retain a median r = 0.0037 (0/3 sections have a bootstrap CI lower bound above their permutation floor). This is a property of these predictions, not an upper bound on the information content of H&E.",
+      "text_zh": "在控制深度与成分后,**该模型的预测**还剩下中位 r = 0.0037(0/3 张切片的 bootstrap CI 下界高于其置换底线)。这是**这组预测**的性质,不是 H&E 信息量的上界。",
+      "support": "supported",
+      "evidence": {
+        "drg_median": 0.0036962749239866388
+      }
+    },
+    {
+      "text_en": "H&E carries no information beyond depth and composition.",
+      "text_zh": "H&E 在深度与成分之外没有信息。",
+      "support": "out_of_scope",
+      "evidence": {
+        "why": "DRG measures a model, not the data. In the reference dataset DRG rose with backbone quality (8/8 sections), which cannot happen if DRG were a property of the data."
+      }
+    },
+    {
+      "text_en": "DRG close to zero proves the task is impossible.",
+      "text_zh": "DRG 接近 0 证明这个任务做不成。",
+      "support": "out_of_scope",
+      "evidence": {
+        "why": "A null result for one predictor is not a null result for the hypothesis class."
+      }
+    },
+    {
+      "text_en": "DRG above its floor proves the model learned genuine morphology.",
+      "text_zh": "DRG 高于底线证明模型学到了真正的形态学信号。",
+      "support": "out_of_scope",
+      "evidence": {
+        "why": "Above-floor residual information is statistically distinguishable, not mechanistically morphological; that needs a separate experiment."
+      }
+    },
+    {
+      "text_en": "Our r is higher than the number reported in paper X.",
+      "text_zh": "我们的 r 比某论文高。",
+      "support": "not_supported",
+      "evidence": {
+        "why": "Cross-paper comparison requires identical space, panel, split and aggregation. Use stnull.compare(), which raises NotComparable when they differ."
+      }
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "median_over_sections_crosspatient": 0.06872764247370416,
+  "median_over_sections_binary": 0.09142593822756927,
+  "median_over_sections_oracle": 0.1741771722051267,
+  "winnerscurse_mean_over_sections": 0.24987300866869022,
+  "shuffle_floor_mean_over_sections": 0.2173012670565952,
+  "honest_top100_mean_over_sections": 0.1827099365912979,
+  "canonical_missing_from_common_geneset": [
+    "KRT5"
+  ],
+  "per_section": {
+    "A1": {
+      "n_spots": 340,
+      "median_r_crosspatient_6cat": 0.0532,
+      "median_r_binary_tumor": 0.0315,
+      "median_r_oracle_samesection": 0.1835,
+      "q90_r_crosspatient": 0.2125,
+      "frac_genes_r_gt_0.3": 0.038
+    },
+    "B1": {
+      "n_spots": 268,
+      "median_r_crosspatient_6cat": 0.0982,
+      "median_r_binary_tumor": 0.1695,
+      "median_r_oracle_samesection": 0.2443,
+      "q90_r_crosspatient": 0.3346,
+      "frac_genes_r_gt_0.3": 0.1208
+    },
+    "C1": {
+      "n_spots": 165,
+      "median_r_crosspatient_6cat": 0.0851,
+      "median_r_binary_tumor": 0.1033,
+      "median_r_oracle_samesection": 0.1649,
+      "q90_r_crosspatient": 0.2523,
+      "frac_genes_r_gt_0.3": 0.0448
+    },
+    "D1": {
+      "n_spots": 255,
+      "median_r_crosspatient_6cat": 0.0721,
+      "median_r_binary_tumor": 0.0842,
+      "median_r_oracle_samesection": 0.1303,
+      "q90_r_crosspatient": 0.2449,
+      "frac_genes_r_gt_0.3": 0.0529
+    },
+    "E1": {
+      "n_spots": 534,
+      "median_r_crosspatient_6cat": 0.0279,
+      "median_r_binary_tumor": 0.0374,
+      "median_r_oracle_samesection": 0.09,
+      "q90_r_crosspatient": 0.1405,
+      "frac_genes_r_gt_0.3": 0.0176
+    },
+    "F1": {
+      "n_spots": 659,
+      "median_r_crosspatient_6cat": 0.0041,
+      "median_r_binary_tumor": 0.0039,
+      "median_r_oracle_samesection": 0.0741,
+      "q90_r_crosspatient": 0.1048,
+      "frac_genes_r_gt_0.3": 0.0095
+    },
+    "G2": {
+      "n_spots": 402,
+      "median_r_crosspatient_6cat": 0.1115,
+      "median_r_binary_tumor": 0.1171,
+      "median_r_oracle_samesection": 0.2048,
+      "q90_r_crosspatient": 0.2594,
+      "frac_genes_r_gt_0.3": 0.0488
+    },
+    "H1": {
+      "n_spots": 530,
+      "median_r_crosspatient_6cat": 0.0653,
+      "median_r_binary_tumor": 0.0987,
+      "median_r_oracle_samesection": 0.1908,
+      "q90_r_crosspatient": 0.2035,
+      "frac_genes_r_gt_0.3": 0.0244
+    }
+  },
+  "winnerscurse": {
+    "A1": {
+      "median_all_HVG": 0.0532,
+      "top100_winnerscurse": 0.2425,
+      "top100_shuffle_floor_mean": 0.2384,
+      "top100_shuffle_floor_max": 0.2482,
+      "top100_honest_preselected": 0.1761,
+      "n_genes_honest": 87
+    },
+    "B1": {
+      "median_all_HVG": 0.0982,
+      "top100_winnerscurse": 0.3745,
+      "top100_shuffle_floor_mean": 0.3049,
+      "top100_shuffle_floor_max": 0.3293,
+      "top100_honest_preselected": 0.3111,
+      "n_genes_honest": 94
+    },
+    "C1": {
+      "median_all_HVG": 0.0851,
+      "top100_winnerscurse": 0.2785,
+      "top100_shuffle_floor_mean": 0.2615,
+      "top100_shuffle_floor_max": 0.2684,
+      "top100_honest_preselected": 0.1899,
+      "n_genes_honest": 88
+    },
+    "D1": {
+      "median_all_HVG": 0.0721,
+      "top100_winnerscurse": 0.2859,
+      "top100_shuffle_floor_mean": 0.2586,
+      "top100_shuffle_floor_max": 0.2655,
+      "top100_honest_preselected": 0.2284,
+      "n_genes_honest": 90
+    },
+    "E1": {
+      "median_all_HVG": 0.0279,
+      "top100_winnerscurse": 0.1682,
+      "top100_shuffle_floor_mean": 0.1581,
+      "top100_shuffle_floor_max": 0.1708,
+      "top100_honest_preselected": 0.0923,
+      "n_genes_honest": 100
+    },
+    "F1": {
+      "median_all_HVG": 0.0041,
+      "top100_winnerscurse": 0.1309,
+      "top100_shuffle_floor_mean": 0.12,
+      "top100_shuffle_floor_max": 0.1254,
+      "top100_honest_preselected": 0.0588,
+      "n_genes_honest": 87
+    },
+    "G2": {
+      "median_all_HVG": 0.1115,
+      "top100_winnerscurse": 0.2829,
+      "top100_shuffle_floor_mean": 0.2264,
+      "top100_shuffle_floor_max": 0.2394,
+      "top100_honest_preselected": 0.2363,
+      "n_genes_honest": 91
+    },
+    "H1": {
+      "median_all_HVG": 0.0653,
+      "top100_winnerscurse": 0.2356,
+      "top100_shuffle_floor_mean": 0.1706,
+      "top100_shuffle_floor_max": 0.1912,
+      "top100_honest_preselected": 0.1687,
+      "n_genes_honest": 97
+    }
+  },
+  "entropy": {
+    "A1": {
+      "n_spots": 340,
+      "n_labels": 5,
+      "label_entropy_nats": 0.665,
+      "dominant_label": "invasive cancer",
+      "dominant_frac": 0.826
+    },
+    "B1": {
+      "n_spots": 268,
+      "n_labels": 4,
+      "label_entropy_nats": 1.345,
+      "dominant_label": "connective tissue",
+      "dominant_frac": 0.354
+    },
+    "C1": {
+      "n_spots": 165,
+      "n_labels": 3,
+      "label_entropy_nats": 0.611,
+      "dominant_label": "invasive cancer",
+      "dominant_frac": 0.764
+    },
+    "D1": {
+      "n_spots": 255,
+      "n_labels": 3,
+      "label_entropy_nats": 0.793,
+      "dominant_label": "invasive cancer",
+      "dominant_frac": 0.545
+    },
+    "E1": {
+      "n_spots": 534,
+      "n_labels": 3,
+      "label_entropy_nats": 0.763,
+      "dominant_label": "invasive cancer",
+      "dominant_frac": 0.637
+    },
+    "F1": {
+      "n_spots": 659,
+      "n_labels": 3,
+      "label_entropy_nats": 0.453,
+      "dominant_label": "invasive cancer",
+      "dominant_frac": 0.876
+    },
+    "G2": {
+      "n_spots": 402,
+      "n_labels": 6,
+      "label_entropy_nats": 1.483,
+      "dominant_label": "invasive cancer",
+      "dominant_frac": 0.348
+    },
+    "H1": {
+      "n_spots": 530,
+      "n_labels": 6,
+      "label_entropy_nats": 1.633,
+      "dominant_label": "connective tissue",
+      "dominant_frac": 0.319
+    }
+  }
+}

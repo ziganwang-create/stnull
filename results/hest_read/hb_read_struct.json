@@ -1,0 +1,126 @@
+{
+ "patient_map_from_HEST_v1_1_0": {
+  "ZEN49": "Patient 1",
+  "ZEN48": "Patient 1",
+  "ZEN40": "Patient 7",
+  "ZEN36": "Patient 7"
+ },
+ "subseries": {
+  "ZEN49": "A121573_Rep1",
+  "ZEN48": "A121573_Rep2",
+  "ZEN40": "A938797_Rep1",
+  "ZEN36": "A938797_Rep2"
+ },
+ "splits": {
+  "0": {
+   "test": [
+    "ZEN49",
+    "ZEN48"
+   ],
+   "train": [
+    "ZEN40",
+    "ZEN36"
+   ]
+  },
+  "1": {
+   "test": [
+    "ZEN40",
+    "ZEN36"
+   ],
+   "train": [
+    "ZEN49",
+    "ZEN48"
+   ]
+  }
+ },
+ "leakage_check": [
+  {
+   "fold": 0,
+   "test_patients": [
+    "Patient 1"
+   ],
+   "train_patients": [
+    "Patient 7"
+   ],
+   "overlap": []
+  },
+  {
+   "fold": 1,
+   "test_patients": [
+    "Patient 7"
+   ],
+   "train_patients": [
+    "Patient 1"
+   ],
+   "overlap": []
+  }
+ ],
+ "ZEN36": {
+  "n_spots": 1691,
+  "n_genes": 36601,
+  "in_tissue_n": 1691,
+  "in_tissue_frac": 1.0,
+  "is_integer": true,
+  "xmin": 1.0,
+  "xmax": 4755.0,
+  "obs_total_counts_matches_rowsum": true,
+  "n_patch_barcodes": 1691,
+  "patch_barcodes_equal_obs": true,
+  "patch_barcodes_same_order": true,
+  "dup_genes": 0,
+  "var_identical_to_first": true,
+  "miss_var50": []
+ },
+ "ZEN40": {
+  "n_spots": 2128,
+  "n_genes": 36601,
+  "in_tissue_n": 2128,
+  "in_tissue_frac": 1.0,
+  "is_integer": true,
+  "xmin": 1.0,
+  "xmax": 2716.0,
+  "obs_total_counts_matches_rowsum": true,
+  "n_patch_barcodes": 2128,
+  "patch_barcodes_equal_obs": true,
+  "patch_barcodes_same_order": true,
+  "dup_genes": 0,
+  "var_identical_to_first": true,
+  "miss_var50": []
+ },
+ "ZEN48": {
+  "n_spots": 2385,
+  "n_genes": 36601,
+  "in_tissue_n": 2385,
+  "in_tissue_frac": 1.0,
+  "is_integer": true,
+  "xmin": 1.0,
+  "xmax": 3127.0,
+  "obs_total_counts_matches_rowsum": true,
+  "n_patch_barcodes": 2385,
+  "patch_barcodes_equal_obs": true,
+  "patch_barcodes_same_order": true,
+  "dup_genes": 0,
+  "var_identical_to_first": true,
+  "miss_var50": []
+ },
+ "ZEN49": {
+  "n_spots": 2203,
+  "n_genes": 36601,
+  "in_tissue_n": 2203,
+  "in_tissue_frac": 1.0,
+  "is_integer": true,
+  "xmin": 1.0,
+  "xmax": 2567.0,
+  "obs_total_counts_matches_rowsum": true,
+  "n_patch_barcodes": 2203,
+  "patch_barcodes_equal_obs": true,
+  "patch_barcodes_same_order": true,
+  "dup_genes": 0,
+  "var_identical_to_first": true,
+  "miss_var50": []
+ },
+ "all_spots_equals_in_tissue": true,
+ "spotsets_used": [
+  "all"
+ ]
+}

@@ -1,0 +1,31 @@
+C:\Users\wangzigan\AppData\Roaming\Python\Python311\site-packages\pandas\core\arrays\masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+C:\Users\wangzigan\AppData\Roaming\Python\Python311\site-packages\numpy\lib\nanfunctions.py:1217: RuntimeWarning: All-NaN slice encountered
+  r, k = function_base._ureduce(a, func=_nanmedian, axis=axis, out=out,
+[A] 166s  r_full=0.0417 depth_null=0.0871 r_nbr=0.1076 drg=nan
+C:\Users\wangzigan\AppData\Roaming\Python\Python311\site-packages\numpy\lib\nanfunctions.py:1217: RuntimeWarning: All-NaN slice encountered
+  r, k = function_base._ureduce(a, func=_nanmedian, axis=axis, out=out,
+[B] 256s  r_full=0.2381 depth_null=0.3766 r_nbr=0.2522 drg=nan
+C:\Users\wangzigan\AppData\Roaming\Python\Python311\site-packages\numpy\lib\nanfunctions.py:1217: RuntimeWarning: All-NaN slice encountered
+  r, k = function_base._ureduce(a, func=_nanmedian, axis=axis, out=out,
+[C] 294s  r_full=0.1854 depth_null=0.2429 r_nbr=0.1638 drg=nan
+C:\Users\wangzigan\AppData\Roaming\Python\Python311\site-packages\numpy\lib\nanfunctions.py:1217: RuntimeWarning: All-NaN slice encountered
+  r, k = function_base._ureduce(a, func=_nanmedian, axis=axis, out=out,
+[D] 442s  r_full=0.0969 depth_null=0.1916 r_nbr=0.1451 drg=nan
+C:\Users\wangzigan\AppData\Roaming\Python\Python311\site-packages\numpy\lib\nanfunctions.py:1217: RuntimeWarning: All-NaN slice encountered
+  r, k = function_base._ureduce(a, func=_nanmedian, axis=axis, out=out,
+[E] 539s  r_full=0.0244 depth_null=0.1538 r_nbr=0.0906 drg=nan
+C:\Users\wangzigan\AppData\Roaming\Python\Python311\site-packages\numpy\lib\nanfunctions.py:1217: RuntimeWarning: All-NaN slice encountered
+  r, k = function_base._ureduce(a, func=_nanmedian, axis=axis, out=out,
+[F] 682s  r_full=0.0182 depth_null=0.1358 r_nbr=0.0381 drg=nan
+C:\Users\wangzigan\AppData\Roaming\Python\Python311\site-packages\numpy\lib\nanfunctions.py:1217: RuntimeWarning: All-NaN slice encountered
+  r, k = function_base._ureduce(a, func=_nanmedian, axis=axis, out=out,
+[G] 778s  r_full=0.1467 depth_null=0.2239 r_nbr=0.1245 drg=nan
+C:\Users\wangzigan\AppData\Roaming\Python\Python311\site-packages\numpy\lib\nanfunctions.py:1217: RuntimeWarning: All-NaN slice encountered
+  r, k = function_base._ureduce(a, func=_nanmedian, axis=axis, out=out,
+[H] 903s  r_full=0.1275 depth_null=0.2127 r_nbr=0.1065 drg=nan
+wrote D:\project\STImage\stnull\tests\regress_nulls_cv_within_section.csv
+MEDIAN r_model        = 0.1199  (n=36)
+MEDIAN depth_null     = 0.2021  (n=36)
+MEDIAN r_nbr          = 0.1281  (n=36)
+MEDIAN dg             = 0.0207  (n=36)

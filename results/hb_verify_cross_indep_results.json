@@ -1,0 +1,86 @@
+{
+ "LUNG": {
+  "recomputed": 0.6942,
+  "recorded": 0.6942,
+  "delta": 0.0,
+  "folds": [
+   0.6897,
+   0.6987
+  ],
+  "sparsity": 0.4889,
+  "flag": "OK"
+ },
+ "HCC": {
+  "recomputed": 0.1484,
+  "recorded": 0.1484,
+  "delta": 0.0,
+  "folds": [
+   0.1202,
+   0.1767
+  ],
+  "sparsity": 0.8554,
+  "flag": "OK"
+ },
+ "COAD": {
+  "recomputed": 0.3218,
+  "recorded": 0.3218,
+  "delta": -0.0,
+  "folds": [
+   0.3682,
+   0.2753
+  ],
+  "sparsity": 0.3967,
+  "flag": "OK"
+ },
+ "PRAD": {
+  "recomputed": 0.5401,
+  "recorded": 0.5401,
+  "delta": -0.0,
+  "folds": [
+   0.5861,
+   0.4941
+  ],
+  "sparsity": 0.9406,
+  "flag": "OK"
+ },
+ "CCRCC": {
+  "recomputed": 0.4945,
+  "recorded": 0.4945,
+  "delta": -0.0,
+  "folds": [
+   0.3743,
+   0.5563,
+   0.4161,
+   0.7526,
+   0.4232,
+   0.4445
+  ],
+  "sparsity": 0.8223,
+  "flag": "OK"
+ },
+ "IDC": {
+  "recomputed": 0.4284,
+  "recorded": 0.4284,
+  "delta": -0.0,
+  "folds": [
+   0.4035,
+   0.3662,
+   0.3823,
+   0.5616
+  ],
+  "sparsity": 0.6223,
+  "flag": "OK"
+ },
+ "READ": {
+  "sparsity": 0.8892
+ },
+ "PAAD": {
+  "sparsity": 0.5638
+ },
+ "SKCM": {
+  "sparsity": 0.7251
+ },
+ "LYMPH_IDC": {
+  "sparsity": 0.8375
+ }
+}

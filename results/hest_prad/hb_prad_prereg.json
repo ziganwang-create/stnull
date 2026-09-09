@@ -1,0 +1,178 @@
+{
+ "cohort": "PRAD (HEST-bench; Erickson et al. prostate, 23 Visium sections, 2 patients)",
+ "utc_timestamp": "2026-08-24T03:25:33Z",
+ "local_time": "2026-08-24 13:25:33",
+ "basis": "HER2ST fit r = 0.0296 + 0.2874*sd(loglib); LYMPH falsified linear extrapolation at sd>1 (saturation ~0.4 expected there). Order prediction (by sd loglib) is the PRIMARY prediction.",
+ "predictions": {
+  "all": {
+   "order_by_sd_desc": [
+    "MEND156",
+    "MEND161",
+    "MEND158",
+    "MEND157",
+    "MEND159",
+    "MEND160",
+    "MEND154",
+    "MEND162",
+    "MEND148",
+    "MEND153",
+    "MEND145",
+    "MEND146",
+    "MEND152",
+    "MEND147",
+    "MEND141",
+    "MEND144",
+    "MEND150",
+    "MEND151",
+    "MEND140",
+    "MEND149",
+    "MEND142",
+    "MEND139",
+    "MEND143"
+   ],
+   "falsification_order": "libnull med-r ranking (cp10k_panel caliber) must track this order; with n=23 the primary criterion is Spearman(sd_loglib, obs med_r) >= 0.5; any inversion between samples whose sd gap >0.10 counts against H3",
+   "point_predictions": {
+    "MEND139": {
+     "sd_loglib": 0.5194463729858398,
+     "point_pred_med_r": 0.17891060960738453,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4",
+     "extrapolated": false
+    },
+    "MEND140": {
+     "sd_loglib": 0.672135055065155,
+     "point_pred_med_r": 0.22278652028036278,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4",
+     "extrapolated": false
+    },
+    "MEND141": {
+     "sd_loglib": 0.8834772706031799,
+     "point_pred_med_r": 0.28351683797056887,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4",
+     "extrapolated": false
+    },
+    "MEND142": {
+     "sd_loglib": 0.5620660781860352,
+     "point_pred_med_r": 0.1911576101892683,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4",
+     "extrapolated": false
+    },
+    "MEND143": {
+     "sd_loglib": 0.46610742807388306,
+     "point_pred_med_r": 0.16358337807667922,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4",
+     "extrapolated": false
+    },
+    "MEND144": {
+     "sd_loglib": 0.7425549626350403,
+     "point_pred_med_r": 0.24302205792506315,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4",
+     "extrapolated": false
+    },
+    "MEND145": {
+     "sd_loglib": 1.0760260820388794,
+     "point_pred_med_r": 0.3388467703250336,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4",
+     "extrapolated": false
+    },
+    "MEND146": {
+     "sd_loglib": 1.0483907461166382,
+     "point_pred_med_r": 0.3309056085189991,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4",
+     "extrapolated": false
+    },
+    "MEND147": {
+     "sd_loglib": 0.9425665736198425,
+     "point_pred_med_r": 0.30049646570447575,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4",
+     "extrapolated": false
+    },
+    "MEND148": {
+     "sd_loglib": 1.306626796722412,
+     "point_pred_med_r": 0.40511112090292284,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4",
+     "extrapolated": false
+    },
+    "MEND149": {
+     "sd_loglib": 0.6596295833587646,
+     "point_pred_med_r": 0.2191930059999263,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4",
+     "extrapolated": false
+    },
+    "MEND150": {
+     "sd_loglib": 0.7276104688644409,
+     "point_pred_med_r": 0.2387276775898456,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4",
+     "extrapolated": false
+    },
+    "MEND151": {
+     "sd_loglib": 0.6783175468444824,
+     "point_pred_med_r": 0.22456309240969247,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4",
+     "extrapolated": false
+    },
+    "MEND152": {
+     "sd_loglib": 1.003311038017273,
+     "point_pred_med_r": 0.3179517129270243,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4",
+     "extrapolated": false
+    },
+    "MEND153": {
+     "sd_loglib": 1.1218587160110474,
+     "point_pred_med_r": 0.3520170231996085,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4",
+     "extrapolated": false
+    },
+    "MEND154": {
+     "sd_loglib": 1.8479536771774292,
+     "point_pred_med_r": 0.5606642996210977,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4",
+     "extrapolated": true
+    },
+    "MEND156": {
+     "sd_loglib": 3.4074137210845947,
+     "point_pred_med_r": 1.008783496491281,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4",
+     "extrapolated": true
+    },
+    "MEND157": {
+     "sd_loglib": 2.5489883422851562,
+     "point_pred_med_r": 0.7621103657345644,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4",
+     "extrapolated": true
+    },
+    "MEND158": {
+     "sd_loglib": 2.8495900630950928,
+     "point_pred_med_r": 0.8484898803835225,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4",
+     "extrapolated": true
+    },
+    "MEND159": {
+     "sd_loglib": 2.3695590496063232,
+     "point_pred_med_r": 0.7105503973696357,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4",
+     "extrapolated": true
+    },
+    "MEND160": {
+     "sd_loglib": 2.1970856189727783,
+     "point_pred_med_r": 0.6609892332225211,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4",
+     "extrapolated": true
+    },
+    "MEND161": {
+     "sd_loglib": 3.1226987838745117,
+     "point_pred_med_r": 0.9269691342073556,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4",
+     "extrapolated": true
+    },
+    "MEND162": {
+     "sd_loglib": 1.4661955833435059,
+     "point_pred_med_r": 0.45096406646928644,
+     "band": "point +/- 0.10 (cross-cohort transfer; LYMPH residuals reached ~0.1); if sd>1 expect saturation, cap ~0.4",
+     "extrapolated": true
+    }
+   }
+  }
+ },
+ "h2_prediction": "zerobio sim >= real med-r in >= 80 percent of (sample x caliber) cells under cp10k_panel, as in HER2ST/LYMPH/READ; falsified if sim < real in >= 40 percent",
+ "official_metric_prediction": "official caliber (log1p raw, var50, fold-concat per-gene pearson, mean over genes then folds): libnull mean-r predicted in 0.20-0.40 (PRAD leaderboard max 0.3913 GenBio-PathFM, min 0.2829 Lunit ViT-S/8, ResNet50 0.3044; priors: LYMPH null 0.3263 beat all 26 rows, READ null 0.2451 beat all 26 rows). We predict null beats >= half of the 26 README rows; falsified if null mean-r < 0.2829 (leaderboard min)."
+}
